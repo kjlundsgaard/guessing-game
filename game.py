@@ -10,7 +10,7 @@ print "Hey %s, I'm thinking of a number between 1 and 100." % (name)
 
 #choose random number beteen 1 and 100
 
-number = str(randint(1, 100))
+number = randint(1, 100)
 # print number
 
 # get guess from player
@@ -20,11 +20,15 @@ guess = None
 while guess != number: 
     # get guess
     guess = raw_input("Take a guess: ")
-    if guess != int(1,100)
-    print "Guess an integer between 1 and 100."
+    guess = int(guess)
+
+    if guess < 1 or guess > 100:
+        print "That number is not between 1 and 100! Try again"
+    # if guess != int(1,100)
+    # print "Guess an integer between 1 and 100."
     
     # if guess is incorrect:
-    if guess < number:
+    elif guess < number:
 
         # give hint
         print "Your guess is too low! Try again."
@@ -33,4 +37,4 @@ while guess != number:
     # else:
     else: break
         # congratulate player
-print "Congratulations! The number was %s." % (number)
+print "Congratulations! The number was %d." % (number)
