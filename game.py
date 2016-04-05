@@ -20,8 +20,8 @@ guess = None
 while guess != number: 
     # get guess
     guess = raw_input("Take a guess: ")
-    # if guess != int(1,100)
-    # print "Guess an integer between 1 and 100."
+    if guess != int(1,100)
+    print "Guess an integer between 1 and 100."
     
     # if guess is incorrect:
     if guess < number:
